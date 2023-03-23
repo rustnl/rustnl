@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    width: 100%;
 }
 
 html {
@@ -12,13 +13,14 @@ body {
     background-color: #fbc194;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .content {
     flex: 1 0 auto;
+    width: 100%;
 }
 
 .footer {
@@ -36,13 +38,25 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     height: auto;
-
-    
 }
 
 @media only screen and (min-width: 1000px) {
     .container {
         width: 1000px;
+    }
+
+    section {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
     }
 }
 
@@ -50,8 +64,7 @@ section {
     margin: 24px;
     padding: 24px;
     background-color: white;
-    border-radius: 5px;   
-    min-width: 400px;
+    border-radius: 5px;
 }
 
 section.about {
