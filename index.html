@@ -27,12 +27,19 @@
   <div class="header"> <a class="logo" href="/"> <img src="./svg/logo.svg" alt="Logo RustNL"> </a>
     <div class="hamburger button button-primary" data-menu-toggle></div>
       <div class="menu" data-menu>
-        <a href="https://rustnl.org/#contact">Contact</a>
-        <a href="https://rustnl.org/#board">Board</a> 
-        <a href="https://rustnl.org/#join">Join us</a>
+        <a href="#contact" onclick="menu_toggle()">Contact</a>
+        <a href="#board" onclick="menu_toggle()">Board</a> 
+        <a href="#join" onclick="menu_toggle()">Join us</a>
         <a href="https://2024.rustnl.org/" class="button button-secondary">RustNL 2024</a>
       </div>
     <div class="overlay" data-menu-overlay></div>
+    <script>
+      function menu_toggle() { 
+        document.querySelector("[data-menu]")?.classList.toggle("open");
+        document.querySelector("[data-menu-overlay]")?.classList.toggle("open");
+        document.querySelector("[data-menu-toggle]")?.classList.toggle("open");
+      };
+    </script>
   </div>
   <section class="hero page">
     <h1 class="text-3xl">RustNL</h1>
@@ -47,16 +54,28 @@
           language in the Netherlands and Europe.
         </p>
         <p>
-          <strong>Looking for the RustNL 2024 conference? <br />
-            Go here: <a href="https://2024.rustnl.org/">2024.rustnl.org</a></strong>
-        </p>
-        <p>
           RustNL organizes meetups and events to bring the Rust community
           together.
         </p>
         <p>
           RustNL is an Associate Member of the <a href="https://foundation.rust-lang.org/">Rust Foundation</a>.
           <img src="images/rf-logo-transparent.png" width="300px" style="display: block;margin: 2rem auto; "/>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="container md:grid md:cols-12 py-12">
+    <div class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10 rustnl2024">
+      <div class="markdown">
+        <h2 class="text-2xl space-y-6" id="rustnl2024">RustNL 2024</h2>
+        <p>
+          Looking for the RustNL 2024 conference? <br />
+          Go here: <a href="https://2024.rustnl.org/">2024.rustnl.org</a>
+        </p>
+        <p>
+          <a href="https://2024.rustnl.org">
+            <img src="https://2024.rustnl.org/images/rustnl2024-header2.png" width="100%" style="display: block;margin: 2rem auto; "/>
+          </a>
         </p>
       </div>
     </div>
